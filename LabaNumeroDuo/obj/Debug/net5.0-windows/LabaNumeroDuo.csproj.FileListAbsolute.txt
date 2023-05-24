@@ -198,3 +198,5 @@ C:\Users\Student\Desktop\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5
 C:\Users\Student\Desktop\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5.0-windows\ref\LabaNumeroDuo.dll
 C:\Users\Student\Desktop\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5.0-windows\LabaNumeroDuo.pdb
 C:\Users\Student\Desktop\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5.0-windows\LabaNumeroDuo.genruntimeconfig.cache
+C:\Users\Игорь\Desktop\unini\2-2\sisharp\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5.0-windows\LabaNumeroDuo.Form4.resources
+C:\Users\Student\Desktop\LabaNumeroTresbaseDuo(mod)\LabaNumeroDuo\obj\Debug\net5.0-windows\LabaNumeroDuo.Form4.resources

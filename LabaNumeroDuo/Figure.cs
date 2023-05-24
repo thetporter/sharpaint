@@ -79,9 +79,9 @@ namespace LabaNumeroDuo
         }
 
         //Методы перемещения границ фигуры
-        public void MovePointTo(int X, int Y) 
+        public void MovePointTo(int X, int Y)
         {
-            Point inter = new Point(X,Y);
+            Point inter = new Point(X, Y);
             SwapPoints(Origin, inter);
         }
         public void MovePointTo(Point inter)
@@ -96,6 +96,23 @@ namespace LabaNumeroDuo
             BR.X = Math.Max(Any.X, Opposite.X); BR.Y = Math.Max(Any.Y, Opposite.Y);
         }
 
+        //Технические методы
+        public Size GetSize()
+        {
+            return new Size(BR.X - TL.X, BR.Y - TL.Y);
+        }
+        public void SetSize(Size SetSize)
+        {
+            SwapPoints(Origin, new Point(Origin.X + SetSize.Width, Origin.Y + SetSize.Height));
+        }
+        public Point GetOrigin()
+        {
+            return new Point(Origin.X, Origin.Y);
+        }
+        public int[] GetTLBR()
+        {
+            return new int[] {TL.X, TL.Y, BR.X, BR.Y};
+        }
         public override string ToString()
         {
             return "Figure " + this.GetType().ToString() + " with Origin point at (" + Origin.X.ToString() + " " + Origin.Y.ToString() + ") and X/Y coordinates in range of (" + TL.X.ToString() + "-" + BR.X.ToString() + "; " + TL.Y.ToString() + "-" + BR.Y.ToString() + ")";

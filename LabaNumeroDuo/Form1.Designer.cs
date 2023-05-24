@@ -36,9 +36,12 @@ namespace LabaNumeroDuo
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePaintStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stylesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArtStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WinSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.internalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showChildrenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePaintStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +50,7 @@ namespace LabaNumeroDuo
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.WinToolStripMenuItem,
-            this.changePaintStyleToolStripMenuItem,
+            this.stylesToolStripMenuItem,
             this.internalToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.WinToolStripMenuItem;
@@ -106,12 +109,28 @@ namespace LabaNumeroDuo
             this.saveAsToolStripMenuItem.Text = "Сохранить как...";
             this.saveAsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ptsPicked);
             // 
-            // changePaintStyleToolStripMenuItem
+            // stylesToolStripMenuItem
             // 
-            this.changePaintStyleToolStripMenuItem.Name = "changePaintStyleToolStripMenuItem";
-            this.changePaintStyleToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
-            this.changePaintStyleToolStripMenuItem.Text = "Change Paint Style";
-            this.changePaintStyleToolStripMenuItem.Click += new System.EventHandler(this.changePaintStyleToolStripMenuItem_Click);
+            this.stylesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ArtStyleToolStripMenuItem,
+            this.WinSizeToolStripMenuItem});
+            this.stylesToolStripMenuItem.Name = "stylesToolStripMenuItem";
+            this.stylesToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.stylesToolStripMenuItem.Text = "Стиль";
+            // 
+            // ArtStyleToolStripMenuItem
+            // 
+            this.ArtStyleToolStripMenuItem.Name = "ArtStyleToolStripMenuItem";
+            this.ArtStyleToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.ArtStyleToolStripMenuItem.Text = "Стиль рисования";
+            this.ArtStyleToolStripMenuItem.Click += new System.EventHandler(this.changePaintStyleToolStripMenuItem_Click);
+            // 
+            // WinSizeToolStripMenuItem
+            // 
+            this.WinSizeToolStripMenuItem.Name = "WinSizeToolStripMenuItem";
+            this.WinSizeToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.WinSizeToolStripMenuItem.Text = "Размер создаваемого окна";
+            this.WinSizeToolStripMenuItem.Click += new System.EventHandler(this.WinSizeToolStripMenuItem_Click);
             // 
             // internalToolStripMenuItem
             // 
@@ -124,9 +143,16 @@ namespace LabaNumeroDuo
             // showChildrenToolStripMenuItem
             // 
             this.showChildrenToolStripMenuItem.Name = "showChildrenToolStripMenuItem";
-            this.showChildrenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.showChildrenToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.showChildrenToolStripMenuItem.Text = "Show Children";
             this.showChildrenToolStripMenuItem.Click += new System.EventHandler(this.showChildrenToolStripMenuItem_Click);
+            // 
+            // changePaintStyleToolStripMenuItem
+            // 
+            this.changePaintStyleToolStripMenuItem.Name = "changePaintStyleToolStripMenuItem";
+            this.changePaintStyleToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.changePaintStyleToolStripMenuItem.Text = "Change Paint Style";
+            this.changePaintStyleToolStripMenuItem.Click += new System.EventHandler(this.changePaintStyleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -160,6 +186,9 @@ namespace LabaNumeroDuo
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePaintStyleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stylesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ArtStyleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem WinSizeToolStripMenuItem;
     }
 }
 
