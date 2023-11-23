@@ -37,6 +37,7 @@ namespace LabaNumeroDuo
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // colorDialogLine
@@ -52,7 +53,7 @@ namespace LabaNumeroDuo
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 9);
+            this.button1.Location = new System.Drawing.Point(9, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 22);
@@ -63,7 +64,7 @@ namespace LabaNumeroDuo
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(10, 35);
+            this.button2.Location = new System.Drawing.Point(9, 63);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 22);
@@ -75,7 +76,7 @@ namespace LabaNumeroDuo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 63);
+            this.label1.Location = new System.Drawing.Point(9, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 5;
@@ -83,7 +84,7 @@ namespace LabaNumeroDuo
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(197, 84);
+            this.button4.Location = new System.Drawing.Point(195, 118);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 22);
@@ -94,7 +95,7 @@ namespace LabaNumeroDuo
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(109, 84);
+            this.button5.Location = new System.Drawing.Point(107, 118);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(82, 22);
@@ -115,7 +116,7 @@ namespace LabaNumeroDuo
             "10",
             "12",
             "15"});
-            this.comboBox1.Location = new System.Drawing.Point(129, 60);
+            this.comboBox1.Location = new System.Drawing.Point(128, 90);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(48, 23);
             this.comboBox1.TabIndex = 10;
@@ -123,12 +124,26 @@ namespace LabaNumeroDuo
             this.comboBox1.ValueMember = "int";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_1);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(9, 39);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(133, 19);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Выполнять заливку";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 109);
+            this.ClientSize = new System.Drawing.Size(289, 151);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -154,5 +169,6 @@ namespace LabaNumeroDuo
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

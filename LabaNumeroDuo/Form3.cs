@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LabaNumeroDuo
@@ -18,11 +12,11 @@ namespace LabaNumeroDuo
             //Передает Form1, в которую перейдет результат
             this.home = home;
         }
-        
+
         //Перевод значения с comboBox в цифру
         private int LabelToInt(string Label)
         {
-            
+
             switch (Label)
             {
                 case "1": return 1;
@@ -42,12 +36,13 @@ namespace LabaNumeroDuo
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            Example = new Rect();
             //Задать прямоугольник
             Example.ResetOrigin(Width - 100, 16);
             Example.MovePointTo(Width - 32, 78);
-            Example.SetColor(home.ActiveColor);
-            Example.SetBackground(home.BackColor);
-            Example.SetWidth(home.ActiveWidth);
+            Example.FrontColor = home.ActiveColor;
+            Example.BackColor = home.BackColor;
+            Example.BorderWidth = home.ActiveWidth;
             //Создать графику; нарисовать прямоугольник
             g = CreateGraphics();
             Example.Draw(g);
@@ -56,6 +51,7 @@ namespace LabaNumeroDuo
         //Метод установки значений
         public void SetDefaults(Color main, Color back, int width)
         {
+            g = CreateGraphics();
             colorDialogLine.Color = main;
             colorDialogBckg.Color = back;
             comboBox1.SelectedItem = width.ToString();
@@ -66,8 +62,14 @@ namespace LabaNumeroDuo
         private void button4_Click(object sender, EventArgs e)
         {
             home.ActiveColor = colorDialogLine.Color;
-            home.BackgroundColor = colorDialogBckg.Color;
+            if (checkBox1.CheckState == CheckState.Checked)
+            {
+                home.BackgroundColor = colorDialogBckg.Color;
+                home.DoBackground = true; home.FillSelector.Checked = true;
+            }
+            else { home.DoBackground = false; home.FillSelector.Checked = false; }
             home.ActiveWidth = LabelToInt((string)comboBox1.SelectedItem);
+            foreach (Form2 c in home.MdiChildren) { c.UpdatePenData(); }
             this.Close();
         }
         private void button5_Click(object sender, EventArgs e)
@@ -80,7 +82,7 @@ namespace LabaNumeroDuo
         {
             colorDialogLine.ShowDialog();
             Example.Erase(g);
-            Example.SetColor(colorDialogLine.Color);
+            Example.FrontColor = colorDialogLine.Color;
             Example.Draw(g);
         }
 
@@ -88,15 +90,21 @@ namespace LabaNumeroDuo
         {
             colorDialogBckg.ShowDialog();
             Example.Erase(g);
-            Example.SetBackground(colorDialogBckg.Color);
+            Example.BackColor = colorDialogBckg.Color;
             Example.Draw(g);
         }
 
         private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
         {
             Example.Erase(g);
-            Example.SetWidth(LabelToInt((string)comboBox1.SelectedItem));
+            Example.BorderWidth = LabelToInt((string)comboBox1.SelectedItem);
             Example.Draw(g);
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked) button2.Enabled = true; else button2.Enabled = false;
+            Example.drawback = checkBox1.Checked;
         }
     }
 }

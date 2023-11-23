@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Игорь\\Desktop\\unini\\2-2\\sisharp\\LabaNumeroTresbaseDuo(mod)\\LabaNumeroDuo\\LabaNumeroDuo.csproj": {}
+    "C:\\Users\\TheEl\\Desktop\\unini\\3-1\\sharp814\\RedefinedRealPaint\\LabaNumeroDuo\\LabaNumeroDuo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Игорь\\Desktop\\unini\\2-2\\sisharp\\LabaNumeroTresbaseDuo(mod)\\LabaNumeroDuo\\LabaNumeroDuo.csproj": {
+    "C:\\Users\\TheEl\\Desktop\\unini\\3-1\\sharp814\\RedefinedRealPaint\\LabaNumeroDuo\\LabaNumeroDuo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Игорь\\Desktop\\unini\\2-2\\sisharp\\LabaNumeroTresbaseDuo(mod)\\LabaNumeroDuo\\LabaNumeroDuo.csproj",
+        "projectUniqueName": "C:\\Users\\TheEl\\Desktop\\unini\\3-1\\sharp814\\RedefinedRealPaint\\LabaNumeroDuo\\LabaNumeroDuo.csproj",
         "projectName": "LabaNumeroDuo",
-        "projectPath": "C:\\Users\\Игорь\\Desktop\\unini\\2-2\\sisharp\\LabaNumeroTresbaseDuo(mod)\\LabaNumeroDuo\\LabaNumeroDuo.csproj",
-        "packagesPath": "C:\\Users\\Игорь\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Игорь\\Desktop\\unini\\2-2\\sisharp\\LabaNumeroTresbaseDuo(mod)\\LabaNumeroDuo\\obj\\",
+        "projectPath": "C:\\Users\\TheEl\\Desktop\\unini\\3-1\\sharp814\\RedefinedRealPaint\\LabaNumeroDuo\\LabaNumeroDuo.csproj",
+        "packagesPath": "C:\\Users\\TheEl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TheEl\\Desktop\\unini\\3-1\\sharp814\\RedefinedRealPaint\\LabaNumeroDuo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Игорь\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TheEl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
